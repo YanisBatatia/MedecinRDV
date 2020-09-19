@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--grey);
+  padding: 6px 2vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: scale-down;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.colonne {
+  flex-direction: column;
+  gap: 3px;
+}
+
+p {
+  font-weight: bold;
+}
+
+a {
+  font-size: 17px;
+  letter-spacing: -0.26px;
+}

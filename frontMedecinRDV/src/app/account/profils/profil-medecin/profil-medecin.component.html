@@ -1,0 +1,143 @@
+<h1>Profil Médecin</h1>
+<form ngNativeValidate [formGroup]="formProfilMedecin" (ngSubmit)="onSubmit()">
+  <div class="inputs">
+
+    <div class="form-field" id="prenom-field">
+      <input
+        type="text"
+        name="prenom"
+        id="prenom"
+        formControlName="prenom"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="prenom">Prénom</label>
+    </div>
+
+    <div class="form-field" id="nom-field">
+      <input
+        type="text"
+        name="nom"
+        id="nom"
+        formControlName="nom"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="nom">Nom</label>
+    </div>
+
+    <div class="form-field" id="mail-field">
+      <input
+        type="email"
+        name="mail"
+        id="mail"
+        formControlName="mail"
+        placeholder=" "
+        email
+        [required]="true"
+      />
+      <label for="mail">Mail</label>
+    </div>
+
+    <div class="form-field" id="telephone-field">
+      <input
+        type="tel"
+        name="telephone"
+        id="telephone"
+        minlength="10"
+        formControlName="telephone"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="telephone">Téléphone</label>
+    </div>
+
+    <div class="form-field" id="adresse-field">
+      <input
+        type="text"
+        name="adresse"
+        id="adresse"
+        formControlName="adresse"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="adresse">Adresse</label>
+    </div>
+
+    <div class="form-field" id="codePostal-field">
+      <input
+        type="text"
+        name="codePostal"
+        id="codePostal"
+        pattern="^(?:[0-8]\d|9[0-8])\d{3}$"
+        (keypress)="allowOnlyNumbersOnKeyPress($event)"
+        (paste)="allowOnlyNumbersOnPaste($event)"
+        formControlName="codePostal"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="codePostal">Code Postal</label>
+    </div>
+
+    <div class="form-field" id="ville-field">
+      <input
+        type="text"
+        name="ville"
+        id="ville"
+        formControlName="ville"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="ville">Ville</label>
+    </div>
+
+    <div class="form-field" id="specialisation-field">
+      <input
+        type="text"
+        name="specialisation"
+        id="specialisation"
+        formControlName="specialisation"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="specialisation">Spécialisation</label>
+    </div>
+
+    <div class="form-field" id="tempsRdv-field">
+      <input
+        type="time"
+        value="00:30"
+        min="00:15"
+        max="03:00"
+        step="900"
+        name="tempsRdv"
+        id="tempsRdv"
+        #tempsRdv
+        formControlName="tempsRdv"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="tempsRdv">Temps RDV</label>
+    </div>
+
+    <div class="form-field" id="password-field">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        minlength="5"
+        formControlName="password"
+        placeholder=" "
+        [required]="true"
+      />
+      <label for="password">Mot de passe</label>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <button type="button" class="button white" id="undo" (click)="undoPendingChanges()">Annuler</button>
+    <button type="submit" class="button blue" id="validate">Valider</button>
+    <button type="button" class="button red" id="delete" (click)="deleteMedecin()">Supprimer mon compte</button>
+  </div>
+</form>

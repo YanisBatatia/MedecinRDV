@@ -1,0 +1,46 @@
+<div *ngIf="!resultatMedecins || !resultatMedecins.length" class="search">
+  <h1 class="cta">Je trouve mon spécialiste dans ma ville !</h1>
+
+  <form ngNativeValidate [formGroup]="formulaire" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="nomOuSpe"
+      id="nomOuSpe"
+      formControlName="nomOuSpe"
+      placeholder="Médecin ou spécialité"
+      class="button white"
+      [required]="true"
+    />
+
+    <input
+      type="text"
+      name="ville"
+      id="ville"
+      formControlName="ville"
+      placeholder="Ville"
+      class="button white"
+      [required]="true"
+    />
+
+    <button type="submit" class="button blue">Rechercher</button>
+  </form>
+  <div *ngIf="resultatMedecins && !resultatMedecins.length" id="empty-result">Pas de résultats
+    pour {{ nomOuSpe }} à {{ ville }}</div>
+</div>
+
+<div *ngIf="resultatMedecins && resultatMedecins.length" class="result">
+  <h1>{{ nomOuSpe }} à {{ ville }}</h1>
+
+  <table>
+    <tr *ngFor="let resultatMedecin of resultatMedecins">
+      <td id="docteur">
+        <a routerLink="account/medecin/{{ resultatMedecin.idUser }}/profil" id="nom-prenom">Dr {{ resultatMedecin.prenom}} {{ resultatMedecin.nom }}</a>
+        <p id="spe">{{ resultatMedecin.specialisation}}</p>
+        <p id="adresse">{{ resultatMedecin.adresse }}</p>
+        <p id="codePostal-ville">{{ resultatMedecin.codePostal }} {{ resultatMedecin.ville }}</p>
+        <a routerLink="account/medecin/{{ resultatMedecin.idUser }}/rendez-vous" class="button blue" id="rdv">Prendre rendez-vous</a>
+      </td>
+      <td id="creneaux">Créneaux</td>
+    </tr>
+  </table>
+</div>

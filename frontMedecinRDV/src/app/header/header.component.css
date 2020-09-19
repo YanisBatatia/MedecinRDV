@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  padding: 0 1vw;
+  justify-content: space-between;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+  gap: 15%;
+}
+
+.left-menu a {
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  font-family: Comfortaa, sans-serif;
+}
+
+.left-menu img {
+  margin-left: 15px;
+}
+
+.left-menu img {
+  width: 72px;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu ul {
+  flex: 1;
+  display: flex;
+  gap: 2.4vw;
+}
+
+.right-menu ul li {
+  display: flex;
+  align-items: center;
+}
+
+

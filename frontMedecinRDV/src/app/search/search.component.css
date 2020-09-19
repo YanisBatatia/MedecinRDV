@@ -1,0 +1,133 @@
+:host {
+  width: 100%;
+}
+
+.search, .result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+}
+
+.result {
+  padding-top: 29px;
+}
+
+.cta {
+  font-size: 50px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.47;
+  letter-spacing: -0.96px;
+  margin-bottom: 116px;
+}
+
+input {
+  display: inline-block;
+  width: 26vw;
+}
+
+input::placeholder {
+  color: var(--azure);
+}
+
+input:focus {
+  border: 2px solid var(--azure);
+}
+
+button[type=submit] {
+  margin: auto;
+}
+
+input, button {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  padding: 25px 7vw;
+  margin-bottom: 90px;
+}
+
+#empty-result {
+  color: var(--red);
+  font-size: 32px;
+  margin-top: 70px;
+}
+
+#nomOuSpe {
+  padding: 25px 9vw;
+}
+
+#ville {
+  padding: 25px 1vw;
+}
+
+.result h1 {
+  font-size: 64px;
+  color: var(--azure);
+  margin-top: 0;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 52.6%;
+  font-size: 30px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+  height: 80px;
+}
+
+td a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td#docteur > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#nom-prenom {
+  color: var(--black);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+p {
+  margin: auto;
+}
+
+#spe {
+  color: var(--azure);
+}
+
+#adresse,
+#codePostal-ville {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+#rdv {
+  width: 50%;
+  height: unset;
+  margin: auto;
+}
+
+td#creneaux {
+  color: var(--azure);
+}
+
+tr:nth-child(even) {
+  background-color: var(--grey);
+}
